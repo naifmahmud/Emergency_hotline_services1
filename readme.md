@@ -15,5 +15,5 @@ Event Bubbling---> Suppose we are finding somethig.With event bubling we can fin
    Event Delegation--> Attach one listener to a parent instead of many choldren.Very much helpful for evnt handle dynamically.
     
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
-
-
+preventDefault() -->stop the browser's default action for the event
+stopPropagation() -->Prevent the bubbling event to start
