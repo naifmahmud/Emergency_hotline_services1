@@ -34,13 +34,16 @@ for(let callButtons of callBtn)
         
         
         
-        alert(callImage+' '+"Calling "+serviceName+" "+ serviceNumber);
+        // alert(callImage+' '+"Calling "+serviceName+" "+ serviceNumber);
 
         const coinCounter= getElement("coin-counter").innerText;
         let currentCoinNumber= Number(coinCounter)-20;
         if(currentCoinNumber<20 && currentCoinNumber<0){
             alert("Your coin is less than 20");
             return;
+        }
+        else{
+          alert(callImage+' '+"Calling "+serviceName+" "+ serviceNumber);
         }
         getElement("coin-counter").innerText= currentCoinNumber;
         
@@ -58,6 +61,29 @@ for(let callButtons of callBtn)
        `;
 
        historyContainer.append(newDiv);
+    })
+}
+
+// Copy Button Functionality
+const copyBtn =document.getElementsByClassName("copy-btn");
+for(let copyButtons of copyBtn)
+{
+    copyButtons.addEventListener("click",function(){
+        const hotlineNumbers= copyButtons.parentNode.parentNode.parentNode.children[1].children[2].innerText;
+        console.log(hotlineNumbers);
+
+        const copyCounter= getElement("copy-counter").innerText;
+        let currentCopyNumber= Number(copyCounter)+1;
+        getElement("copy-counter").innerText= currentCopyNumber;
+        
+        // clipboard portion
+        navigator.clipboard.writeText(hotlineNumbers)
+        .then(() =>{
+            alert(hotlineNumbers+" coppied succesfully")
+        })
+
+
+
     })
 }
 
