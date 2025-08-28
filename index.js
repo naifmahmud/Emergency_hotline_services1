@@ -61,6 +61,12 @@ for(let callButtons of callBtn)
     })
 }
 
+const clearButton= getElement("clear-btn");
+clearButton.addEventListener("click",function(){
+    getElement("history-container").innerHTML="";
+
+})
+
 
 
 
