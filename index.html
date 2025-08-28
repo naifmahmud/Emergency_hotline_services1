@@ -12,15 +12,15 @@
 </head>
 <body class="bg-[#ecfff0]">
     <header>
-        <nav class="parent flex bg-white shadow-[0 1 50 0] justify-between p-4 items-center ">
+        <nav class="parent justify-around w-full md:flex bg-white shadow-[0 1 50 0] justify-between p-4 items-center ">
                 <div class="leftDiv flex gap-2.5">
                     <img class="w-12 h-12" src="./assets/logo.png" alt="">
                     <h1 class="text-[#006747] text-xl font-bold">Emergency <br> Service</h1>
                 </div>
-                <div class="rightDiv flex flex-row gap-5 ">
+                <div class="rightDiv  space-y-2 md:flex flex-row gap-5 ">
                         <div class="heartDiv gap-2.5 p-3 flex bg-[#ecfff0] rounded-4xl w-25 h-12 justify-center ">
                             <p class="font-bold"><span id="heart counter">0</span> </p>
-                            <img class="w-7 h-7" src="./assets/heart.png" alt="">
+                            <img id="heart-id" class="w-7 h-7" src="./assets/heart.png" alt="">
                         </div>
                         <div class="coinDiv gap-2.5 p-3 flex bg-[#ecfff0] rounded-4xl w-25 h-12 justify-center"> 
                             <p class="font-bold"><span id="coin-counter">0</span> </p>
@@ -39,13 +39,13 @@
     </header>
     <main>
         <section class="service-list-parent grid grid-cols-12 gap-8 my-14 mx-8">
-            <section class=" col-span-9">
-                <div class="cardParent grid grid-cols-3 gap-6">
+            <section class=" col-span-full md:col-span-9">
+                <div class="cardParent grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <!-- National emergency number -->
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-1 bg-[#FFE3E2] rounded-xs" src="./assets/emergency.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button ><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">National Emergency Number</h1>
@@ -58,7 +58,7 @@
                             <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
                         </div>
                         <div class="text-white bg-green-500  w-1/2 p-1 text-center rounded-xl shadow-md ">
-                            <button class="call-btn flex gap-3 mx-auto"><img class="w-3 " src="./assets/phone-flip.png" alt="">Call</button>
+                            <button id="call-btn-1" class="call-btn flex gap-3 mx-auto"><img class="w-3 " src="./assets/phone-flip.png" alt="">Call</button>
                         </div>
                     </div>
                     </div>
@@ -66,7 +66,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-1 bg-[#FFE3E2] rounded-xs" src="./assets/police.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">Police Helpline Number</h1>
@@ -87,7 +87,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-1 bg-[#FFE3E2] rounded-xs" src="./assets/fire-service.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button ><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">Fire Service Number</h1>
@@ -108,7 +108,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-1 bg-[#FFE3E2] rounded-xs" src="./assets/ambulance.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button ><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">Ambulance Service</h1>
@@ -129,7 +129,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-1 bg-[#FFE3E2] rounded-xs" src="./assets/emergency.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button ><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">Women & Child Helpline</h1>
@@ -150,7 +150,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-1 bg-[#FFE3E2] rounded-xs" src="./assets/emergency.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button ><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">Anti-Corruption Helpline</h1>
@@ -171,7 +171,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-2 bg-[#FFE3E2] rounded-xs" src="./assets/emergency.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button ><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">Electricity Helpline</h1>
@@ -192,7 +192,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-2 bg-[#FFE3E2] rounded-xs" src="./assets/emergency.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button ><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">Brac Helpline</h1>
@@ -213,7 +213,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-sm">
                     <div class="icon_and_heart_div flex justify-between mb-1.5">
                     <img class="w-8 h-8 p-2 bg-[#FFE3E2] rounded-xs" src="./assets/emergency.png" alt="">
-                    <button><i class="fa-regular fa-heart text-gray-500"></i></button>
+                    <button ><i class="fa-regular fa-heart text-gray-500 heart-btn"></i></button>
                     </div>
                     <div class="information_div p-2">
                     <h1 class="text-6 font-bold">Bangladesh Railway Helpline </h1>
@@ -232,7 +232,7 @@
                     </div>
                 </div>
             </section>
-            <aside class="bg-white col-span-3">
+            <aside class="bg-white col-span-full md:col-span-3">
                <div>
                  <div class="flex justify-around items-center my-5">
                     <div>
@@ -249,5 +249,7 @@
             </aside>
         </section>
     </main>
+
+    <script src="index.js"></script>
 </body>
 </html>
