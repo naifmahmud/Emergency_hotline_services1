@@ -43,7 +43,7 @@ for(let callButtons of callBtn)
             return;
         }
         else{
-          alert(callImage+' '+"Calling "+serviceName+" "+ serviceNumber);
+          alert('📞'+' '+"Calling "+serviceName+" "+ serviceNumber);
         }
         getElement("coin-counter").innerText= currentCoinNumber;
         
